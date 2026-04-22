@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy.WithOrigins(
-                    "https://69e80af40eccf700084c3330--poetic-sunflower-19983c.netlify.app", // »œÊ‰ ‘—ÿ… ›Ì «·‰Â«Ì…
+                    "https://69e80af40eccf700084c3330--poetic-sunflower-19983c.netlify.app",
                     "http://localhost:4200" 
                   )
                   .AllowAnyHeader()
