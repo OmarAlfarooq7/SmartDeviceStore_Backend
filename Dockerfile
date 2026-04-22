@@ -1,7 +1,7 @@
 # Stage 1: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["SmartDeviceStore.API.csproj", "./"]
+COPY ["SmartDevicesStore.API.csproj", "./"]
 RUN dotnet restore "./SmartDevicesStore.API.csproj"
 COPY . .
 RUN dotnet publish "./SmartDevicesStore.API.csproj" -c Release -o /app/publish
