@@ -11,7 +11,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowNetlify",
         policy =>
         {
-            policy.WithOrigins("https://69e80af40eccf700084c3330--poetic-sunflower-19983c.netlify.app/") // «·”„«Õ ··√‰ÃÊ·«—
+            policy.WithOrigins(
+                    "https://69e80af40eccf700084c3330--poetic-sunflower-19983c.netlify.app", // »œÊ‰ ‘—ÿ… ›Ì «·‰Â«Ì…
+                    "http://localhost:4200" 
+                  )
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
