@@ -11,15 +11,11 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowNetlify",
         policy =>
         {
-            policy.WithOrigins(
-                    "https://69e80af40eccf700084c3330--poetic-sunflower-19983c.netlify.app",
-                    "http://localhost:4200" 
-                  )
+            policy.WithOrigins("https://69e80af40eccf700084c3330--poetic-sunflower-19983c.netlify.app") 
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
 });
-
 // 2.  ⁄—Ì› ﬁ«⁄œ… «·»Ì«‰« 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
