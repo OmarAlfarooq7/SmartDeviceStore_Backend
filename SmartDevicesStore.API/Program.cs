@@ -17,9 +17,10 @@ builder.Services.AddCors(options =>
         });
 });
 // 2. ÊÚÑíİ ŞÇÚÏÉ ÇáÈíÇäÇÊ
+//builder.Services.AddDbContext<ApplicationDbContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+    options.UseInMemoryDatabase("SmartDeviceDB"));
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
