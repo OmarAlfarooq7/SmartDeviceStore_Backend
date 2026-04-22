@@ -8,10 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 // ≈÷«›… Œœ„… CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngular",
+    options.AddPolicy("AllowNetlify",
         policy =>
         {
-            policy.WithOrigins("http://localhost:4200") // «·”„«Õ ··√‰ÃÊ·«—
+            policy.WithOrigins("https://69e80af40eccf700084c3330--poetic-sunflower-19983c.netlify.app/") // «·”„«Õ ··√‰ÃÊ·«—
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
@@ -41,7 +41,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowAngular");
+app.UseCors("AllowNetlify");
 
 app.UseAuthorization();
 
